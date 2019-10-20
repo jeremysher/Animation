@@ -16,8 +16,8 @@ public abstract class Animation extends Canvas {
 	private double deltaTime; //s
 	private double t1; //ms
 	
-	public Animation(int x, int y) {
-		JFrame frame = new JFrame("Animation");
+	public Animation(int x, int y, String title) {
+		JFrame frame = new JFrame(title);
 		this.setSize(x, y);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(this);

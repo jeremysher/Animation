@@ -5,11 +5,13 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.RenderingHints;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.JFrame;
 
 @SuppressWarnings("serial")
-public abstract class Animation extends Canvas {
+public abstract class Animation extends Canvas implements MouseListener {
 	
 	private Image offscreenImage;
 	private Graphics offscreenGraphics;
@@ -25,6 +27,7 @@ public abstract class Animation extends Canvas {
         frame.setVisible(true);
         offscreenImage = this.createImage(this.getSize().width, this.getSize().height);
         offscreenGraphics = offscreenImage.getGraphics();
+        this.addMouseListener(this);
 	}
 	
 	public abstract void run();
@@ -69,5 +72,38 @@ public abstract class Animation extends Canvas {
 		return deltaTime;
 	}
 	
+	/*class MouseHandler implements MouseListener {
+	      public void mouseClicked(MouseEvent e) {
+	    	  mouseClick(e);
+	      }
+	      public void mousePressed(MouseEvent e) {
+	    	  mousePress(e);
+	      }
+	      public void mouseReleased(MouseEvent e) {
+	    	  mouseRelease(e);
+	      }
+	      public void mouseEntered(MouseEvent e) {
+	    	  mouseEnter(e);
+	      }
+	      public void mouseExited(MouseEvent e) {
+	    	  mouseExit(e);
+	      }
+	}*/
+	
+	public void mouseClicked(MouseEvent e) {
+		
+	}
+	public void mousePressed(MouseEvent e) {
+		
+    }
+    public void mouseReleased(MouseEvent e) {
+    	
+    }
+    public void mouseEntered(MouseEvent e) {
+    	
+    }
+    public void mouseExited(MouseEvent e) {
+    	
+    }
 
 }

@@ -47,12 +47,12 @@ public abstract class Animation extends Canvas implements MouseListener, KeyList
 			deltaTime = (System.currentTimeMillis() - t1) / 1000;
 			run();
 			t1 = System.currentTimeMillis();
-			this.repaint();
 			try {
 				Thread.sleep(10);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
+			this.repaint();
 		}
 	}
 	

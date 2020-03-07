@@ -9,11 +9,12 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
 import javax.swing.JFrame;
 
 @SuppressWarnings("serial")
-public abstract class Animation extends Canvas implements MouseListener, KeyListener {
+public abstract class Animation extends Canvas implements MouseListener, KeyListener, MouseMotionListener {
 	
 	private Image offscreenImage;
 	private Graphics offscreenGraphics;
@@ -31,6 +32,7 @@ public abstract class Animation extends Canvas implements MouseListener, KeyList
         offscreenGraphics = offscreenImage.getGraphics();
         addMouseListener(this);
         addKeyListener(this);
+        addMouseMotionListener(this);
 	}
 	
 	public abstract void run();
@@ -115,6 +117,14 @@ public abstract class Animation extends Canvas implements MouseListener, KeyList
     	
     }
     
+    @Override
+    public void mouseMoved(MouseEvent e) {
+    	
+    }
     
+    @Override
+    public void mouseDragged(MouseEvent e) {
+    	
+    }
 
 }

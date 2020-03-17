@@ -39,6 +39,12 @@ public class Test {
 				key = e.getKeyChar();
 				keyCode = e.getKeyCode();
 			}
+
+			@Override
+			public void init() {
+				// TODO Auto-generated method stub
+				
+			}
 			
 		};
 		animation.start();

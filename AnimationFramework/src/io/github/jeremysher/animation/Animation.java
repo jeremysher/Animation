@@ -35,11 +35,14 @@ public abstract class Animation extends Canvas implements MouseListener, KeyList
         addMouseMotionListener(this);
 	}
 	
+	public abstract void init();
+	
 	public abstract void run();
 	
 	public abstract void draw(Graphics2D g);
 	
 	public void start() {
+		init();
 		t1 = System.currentTimeMillis();
 		loop();
 	}
